@@ -9,15 +9,18 @@ namespace MVCTest.Controllers
     public class HelloWorldController : Controller
     {
         // GET: HelloWorld
-		//public ActionResult Index()
+		public ActionResult Index( string Name, int nTimes = 1 )
+		{
+			ViewBag.Message = "Hello " + Name;
+			ViewBag.NumTimes = nTimes;
+			return View();
+		}
+
+		//public String Index()
 		//{
-		//	return View();
+		//	//return View();
+		//	return "This is my <b>default</b> action...";
 		//}
-        public String Index()
-        {
-			//return View();
-			return "This is my <b>default</b> action...";
-        }
 
 		//public string Welcome()
 		//{
