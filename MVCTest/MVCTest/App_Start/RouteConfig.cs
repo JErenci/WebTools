@@ -14,10 +14,16 @@ namespace MVCTest
 			routes.IgnoreRoute( "{resource}.axd/{*pathInfo}" );
 
 			routes.MapRoute(
-				name: "Default",
-				url: "{controller}/{action}/{id}",
-				defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-			);
+				name: "Hello",
+				url: "{controller}/{action}/{name}/{id}",
+				defaults: new { controller = "Home", action = "Index", name = UrlParameter.Optional, id = UrlParameter.Optional }
+				); 
+
+			//routes.MapRoute(
+			//	name: "Default",
+			//	url: "{controller}/{action}/{id}",
+			//	defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+			//);
 		}
 	}
 }
